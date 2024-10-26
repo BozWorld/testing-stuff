@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://v26t8nfurpt0"]
+
+[ext_resource type="PackedScene" uid="uid://bnkejp8umnp42" path="res://scene/velo.tscn" id="1_ppyeb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8ede6"]
+size = Vector2(15, 15)
+
+[node name="main_scene" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_8ede6")
+
+[node name="VELO" parent="." instance=ExtResource("1_ppyeb")]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -6.698, 0, -2.765)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.46793, 0.189776, -0.863149, 0, 0.976672, 0.214735, 0.883766, -0.100481, 0.457014, -10.018, 2.735, 6.895)
